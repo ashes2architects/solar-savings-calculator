@@ -1,0 +1,49 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solar Savings Comparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root { --bg:#0b0c10; --card:#111217; --text:#e6e8eb; --muted:#9aa3ad; --accent:#25d366; --accent2:#7aa2f7; --line:#1b1e25; }
+      html, body, #root { height: 100%; }
+      body { margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background: radial-gradient(1200px 600px at 20% -10%, #111827 0%, #0b0c10 45%, #0b0c10 100%); color: var(--text); }
+      .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 56px; }
+      .hero { display:flex; align-items:center; gap:14px; margin-bottom: 14px; }
+      .logo { width: 40px; height: 40px; border-radius: 10px; background: linear-gradient(135deg, var(--accent2), var(--accent)); box-shadow: 0 6px 30px rgba(122,162,247,.2);}
+      h1 { font-size: 28px; margin: 0; letter-spacing: .2px }
+      .sub { color: var(--muted); margin: 6px 0 22px; }
+      .grid { display:grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
+      .card { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 18px; }
+      .card h2 { font-size: 16px; margin: 0 0 12px; color: #cbd5e1; letter-spacing: .3px; }
+      .row { display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 10px; }
+      label { font-size: 12px; color: var(--muted); display:block; margin: 8px 0 6px; }
+      input[type="number"], input[type="text"] { width: 100%; background: #0f1116; border: 1px solid #20242e; color: var(--text); outline: none; border-radius: 10px; padding: 10px 12px; font-size: 14px; }
+      .hint { font-size: 11px; color: var(--muted); margin-top: 6px; }
+      .btn { display:inline-flex; align-items:center; justify-content:center; background: linear-gradient(135deg, var(--accent2), var(--accent)); color:#071017; font-weight: 700; border: none; border-radius: 12px; padding: 10px 14px; cursor: pointer; box-shadow: 0 8px 30px rgba(37,211,102,.2); }
+      .btn.secondary { background: #1b1f2a; color: #d0d6df; border: 1px solid #2a2f3b; box-shadow:none; }
+      .stack { display: grid; gap: 10px; }
+      .statbar { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px;}
+      .pill { background:#0f1116; border:1px solid #20242e; padding:12px 14px; border-radius:12px; }
+      .pill strong { display:block; font-size: 18px; }
+      .legend { display:flex; gap:14px; align-items:center; font-size:12px; color: var(--muted); margin: 6px 0 2px;}
+      .dot { width:10px; height:10px; border-radius: 50%; display:inline-block; }
+      .dot.u { background:#7aa2f7; } .dot.p { background:#25d366; } .dot.c { background:#ff9f43; }
+      .line { height:1px; background:#1b1e25; margin: 10px 0 14px; }
+      .foot { display:flex; gap:10px; justify-content:flex-end; margin-top: 10px; }
+      .grid1 { display:grid; grid-template-columns: 1fr; gap: 18px; }
+      .mt20 { margin-top: 20px; }
+      .muted { color: var(--muted); }
+      @media (max-width: 980px) { .grid { grid-template-columns: 1fr; } }
+      @media print { body { background:#fff; color:#000; } .card { border: none; } .btn, .foot, .hero .logo { display:none !important; } .wrap { max-width: 100%; padding: 0; } }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
